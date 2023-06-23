@@ -9,8 +9,8 @@ namespace UserRegistrationProblem
 {
     public class UserRegistrationValidation
     {
-        private static string REGEX_PASSWORD = "^[a-zA-Z0-9-+_!@#$%^&*.,?]{8,}$"; //regex for password Rule1-At least 8 character
-
+        // private static string REGEX_PASSWORD = "^[a-zA-Z0-9-+_!@#$%^&*.,?]{8,}$"; //regex for password Rule1-At least 8 character
+        private static string REGEX_PASSWORD = "^(?=.*[A-Z])[A-Za-z0-9!@#$%^&*]{8,}$"; //regex for password Rule2- should contains at least one uppar case
 
         public bool ValidatePassword(string password)
         {
