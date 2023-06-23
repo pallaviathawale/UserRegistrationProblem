@@ -9,22 +9,22 @@ namespace UserRegistrationProblem
 {
     public class UserRegistrationValidation
     {
-        private static string REGEX_MOBILENUMBER = "^[1-9]{1,3}[ ][1-9][0-9]{9}$";
+        private static string REGEX_PASSWORD = "^[a-zA-Z0-9-+_!@#$%^&*.,?]{8,}$"; //regex for password Rule1-At least 8 character
 
 
-        public bool ValidateMobileNumber(string mobNumber)
+        public bool ValidatePassword(string password)
         {
-            return Regex.IsMatch(mobNumber, REGEX_MOBILENUMBER);
+            return Regex.IsMatch(password, REGEX_PASSWORD);
         }
         public void PrintResult(bool result)
         {
             if (result)
             {
-                Console.WriteLine("Valid Mobile Number");
+                Console.WriteLine("Valid Password");
             }
             else
             {
-                Console.WriteLine("Invalid Mobile Number");
+                Console.WriteLine("Invalid Password");
             }
         }
     }
